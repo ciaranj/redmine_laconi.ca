@@ -1,5 +1,6 @@
-== Empty plugin
+== laconi.ca plugin
 
-This is an empty plugin based on the sample plugin for Redmine.  Use it
-to help create your own custom plugin
+This plugin is intended to provide basic integration with laconi.ca
+
+Updates to various aspects of redmine will result in status changes in a laconi.ca server.
 
