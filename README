@@ -4,3 +4,19 @@ This plugin is intended to provide basic integration with laconi.ca
 
 Updates to various aspects of redmine will result in status changes in a laconi.ca server.
 
+== Configuration
+Pop along to the 'Plugins' section of the Administration page, select 'Configuration'.  
+On this page fill out the details of the url to the OMB you're using and the username + password of the user you
+want the redmine instance to act as.
+
+Current proof-of-concept just sends a micro blog whenever an issue is saved, currently this message is a static method along the lines of:
+
+@<login name of user who updated issue> just updated issue #<issue number>
+
+However, surprisingly this was a doddle.... stay tuned.
+
+== Server Urls
+The given server url should be the full path to the application, for example: 
+* http://twitter.com
+* http://identi.ca
+* http://some_host/blog/index.php  (Possible laconi.ca installation path)
