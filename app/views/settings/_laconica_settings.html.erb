@@ -1,0 +1,19 @@
+<fieldset>
+<legend><%= l(:laconica_label_server_settings) %></legend>
+<p>
+  <%= l(:laconica_text_settings) %>
+</p>
+
+<p>
+  <label><%= l(:laconica_label_server_url) %></label><%= text_field_tag 'settings[server_url]', @settings['server_url'] %>
+</p>
+
+<p>
+  <label><%= l(:laconica_label_server_username) %></label><%= text_field_tag 'settings[server_username]', @settings['server_username'] %>
+</p>
+
+<p>
+  <label><%= l(:laconica_label_server_password) %></label><%= password_field_tag 'settings[server_password]', @settings['server_password'] %>
+</p>
+
+</fieldset>

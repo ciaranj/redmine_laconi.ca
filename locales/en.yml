@@ -1,0 +1,6 @@
+en:
+  laconica_label_server_settings: Laconi.ca server configuration settings
+  laconica_text_settings: Configure the settings for your laconi.ca server here
+  laconica_label_server_url: The url to reach the laconi.ca instance
+  laconica_label_server_username: Username
+  laconica_label_server_password: Password
