@@ -3,3 +3,4 @@ laconica_text_settings: Configure the settings for your laconi.ca server here
 laconica_label_server_url: laconi.ca host
 laconica_label_server_username: Username
 laconica_label_server_password: Password
+laconica_issue_updates: Updates about this issue

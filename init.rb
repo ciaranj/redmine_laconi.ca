@@ -3,6 +3,7 @@ require 'redmine'
 RAILS_DEFAULT_LOGGER.info 'Starting laconi.ca plugin for RedMine'
 
 require_dependency 'laconica_issue_change_listener'
+require_dependency 'laconica_issue_show_hooks'
 
 Redmine::Plugin.register :laconica_plugin do
   name 'laconi.ca plugin'

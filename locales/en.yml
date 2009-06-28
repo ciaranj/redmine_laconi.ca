@@ -4,3 +4,4 @@ en:
   laconica_label_server_url: The url to reach the laconi.ca instance
   laconica_label_server_username: Username
   laconica_label_server_password: Password
+  laconica_issue_updates: Updates about this issue
