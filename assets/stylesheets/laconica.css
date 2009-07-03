@@ -1,0 +1,25 @@
+ul.statuses{
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+ul.statuses li.status {
+	padding-bottom: 3px;
+}
+
+ul.statuses li.status img {
+	margin-right: 3px;
+}
+
+ul.statuses li.status span.status_time{
+	font-size: 70%;
+}
+
+ul.statuses li.status span.status_text{
+	font-size: 100%;
+}
+ul.statuses li.status span.entry-details {
+	position:absolute; 
+	width:70%
+}
+
