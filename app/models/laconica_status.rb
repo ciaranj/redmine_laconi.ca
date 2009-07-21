@@ -1,23 +1,36 @@
 class LaconicaStatus
   def self.send_update(msg)
     url = "#{self.api_address}/statuses/update.xml?status=" + CGI::escape(msg)
+    debugger
     post_to_server(url)
   end
   
-  def self.search(query, options={})
-    url = "#{self.api_address}/search.json?q=" + CGI::escape(query)
+  # def self.search(query, options={})
+  #   url = "#{self.api_address}/search.json?q=" + CGI::escape(query)
+  # 
+  #   if is_twitter_api
+  #     url=url.sub("twitter.com","search.twitter.com")
+  #   end
+  #     
+  #   if options[:results_per_page]
+  #     url= url +"&rpp=" + options[:results_per_page].to_s
+  #   end
+  #   response= post_to_server(url)
+  #   return ActiveSupport::JSON::decode(response.body.content)
+  # end
 
+  def self.find_by_issue(issue, options={})
     if is_twitter_api
-      url=url.sub("twitter.com","search.twitter.com")
+      # Need to re-implement this.
+    else 
+      url = "#{self.api_address}/laconica/tags/timeline/#{issue.id}.json"
+      if options[:results_per_page]
+        url= url +"?count=" + options[:results_per_page].to_s
+      end
+      response= post_to_server(url)
+      return ActiveSupport::JSON::decode(response.body.content)
     end
-      
-    if options[:results_per_page]
-      url= url +"&rpp=" + options[:results_per_page].to_s
-    end
-    response= post_to_server(url)
-    return ActiveSupport::JSON::decode(response.body.content)
   end
-
 private
   def self.api_address()
     server_url= server_address
