@@ -1,7 +1,6 @@
 class LaconicaStatus
   def self.send_update(msg)
     url = "#{self.api_address}/statuses/update.xml?status=" + CGI::escape(msg)
-    debugger
     post_to_server(url)
   end
   
